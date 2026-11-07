@@ -148,7 +148,8 @@ By **EOD Nov 9**, send the person who gave you this task:
 1. A link to your GitHub repo (or a zip) with your code and a clear commit history.
 2. `submissions/<your_name>_predictions.csv` in the format described in `submissions/README.md`.
 3. A write-up, **maximum 2 pages**, covering: the biggest problems you found, what you changed with before and after numbers, what you tried that did not work, the limits of your evaluation, your latency and compute notes against the 4-core, 15 GB budget, and what you would do next.
-4. A **prompt log** (`prompt_log.md` in your repo, or an exported chat history): every prompt you gave AI tools for this task, in order, with a one-line note on what you did with the answer. Mark answers that were wrong or that you rejected. Do not tidy it up. We read it to understand how you work, not to catch you out.
+4. **Your findings, benchmarks and results as CSVs or simple tables** (for example in a `results/` folder in your repo, and summarised in the write-up). Make them easy to read: one row per experiment or per class, clear column names, and a before and after comparison wherever you changed something. How clearly you communicate your results is part of how we judge the work.
+5. A **prompt log** (`prompt_log.md` in your repo, or an exported chat history): every prompt you gave AI tools for this task, in order, with a one-line note on what you did with the answer. Mark answers that were wrong or that you rejected. Do not tidy it up. We read it to understand how you work, not to catch you out.
 
 ## What happens next
 
