@@ -1,0 +1,154 @@
+{
+  "intents": [
+    {
+      "name": "order_status",
+      "examples": [
+        "my app says confirmed, what does that mean for delivery",
+        "I placed an order 20 minutes ago, any update?",
+        "has my order left the restaurant yet",
+        "track my order",
+        "where's my food",
+        "order status please",
+        "tracking link not showing, where is my order",
+        "order kahan hai mera",
+        "what is the current status of my delivery",
+        "has the rider been assigned yet",
+        "is my food on the way",
+        "when will the rider pick up my order",
+        "can I get an eta for my order"
+      ]
+    },
+    {
+      "name": "delivery_delay",
+      "examples": [
+        "you are late and the rider isn't picking up my calls",
+        "you promised 30 minutes, it's been 75",
+        "why is it delayed so much",
+        "rider has been stuck at the same place for 20 minutes",
+        "delivery late, I am really hungry",
+        "cancel my food order, taking too long",
+        "the delivery time keeps increasing",
+        "where's my food",
+        "eta was 7 pm and it's 8 now",
+        "the order was supposed to be here already"
+      ]
+    },
+    {
+      "name": "cancel_order",
+      "examples": [
+        "cancel my order before it is prepared",
+        "cancel it please",
+        "cancel the order I made 5 minutes ago",
+        "I accidentally ordered, please cancel",
+        "I'd like to cancel this order and reorder",
+        "cancel the grocery order I just placed",
+        "I want to cancel my order",
+        "can you cancel the order, I changed my mind"
+      ]
+    },
+    {
+      "name": "refund_request",
+      "examples": [
+        "refund the amount for the late order",
+        "can I get a refund for the damaged groceries",
+        "refund credited? I don't see it",
+        "my refund is stuck",
+        "the food was inedible, I want a refund",
+        "please process my refund",
+        "I want compensation and a refund for this order",
+        "initiate a refund for my order",
+        "order was delivered cold, refund please"
+      ]
+    },
+    {
+      "name": "missing_item",
+      "examples": [
+        "I did not receive my fries",
+        "half my groceries are missing",
+        "my order is incomplete",
+        "the delivery had only the main course, no sides",
+        "I ordered 3 things but only got 2",
+        "bag mein ek item nahi hai",
+        "the bag was missing the sauce packets"
+      ]
+    },
+    {
+      "name": "wrong_item",
+      "examples": [
+        "this is the wrong order, please fix it",
+        "I asked for veg and got non-veg",
+        "someone else's food came to me",
+        "my order is incomplete",
+        "I received the wrong item",
+        "they delivered the wrong dish",
+        "the order I received belongs to another customer",
+        "an item is missing from my order"
+      ]
+    },
+    {
+      "name": "payment_failed",
+      "examples": [
+        "charged twice, please refund one payment",
+        "upi payment stuck on processing",
+        "money got deducted but the order was not placed",
+        "paisa kat gaya par order nahi hua",
+        "payment gateway error",
+        "card declined at checkout",
+        "I paid but it shows unpaid",
+        "transaction failed, what do I do"
+      ]
+    },
+    {
+      "name": "promo_code_issue",
+      "examples": []
+    },
+    {
+      "name": "change_address",
+      "examples": [
+        "change the address on my account",
+        "address change please",
+        "need to edit my delivery location",
+        "address galat dal diya, change karo",
+        "please redirect my order to another address",
+        "can you deliver to a different address",
+        "I want it sent to my friend's place instead"
+      ]
+    },
+    {
+      "name": "account_help",
+      "examples": []
+    },
+    {
+      "name": "talk_to_agent",
+      "examples": [
+        "talk to executive",
+        "I'd like to speak with a supervisor",
+        "customer care number do",
+        "I want to escalate this to a person",
+        "customer service please",
+        "someone from your team should call me",
+        "put me through to a human agent",
+        "insaan se baat karni hai"
+      ]
+    },
+    {
+      "name": "out_of_scope",
+      "examples": [
+        "translate hello to french",
+        "where can I buy a laptop",
+        "how do I book a flight",
+        "what are the best restaurants in the city",
+        "my car won't start",
+        "what is the capital of France",
+        "I want to book a hotel",
+        "thanks",
+        "who is the prime minister",
+        "what is 15 times 12",
+        "which phone should I buy",
+        "good morning",
+        "tell me a joke",
+        "can you help me with my homework"
+      ]
+    }
+  ]
+}
