@@ -87,7 +87,7 @@ Per-class numbers and the confusion matrix are in `results/baseline_dev.json`. T
 
 ## How the hidden test labels are decided
 
-1. The label is the action the customer wants done. If several are asked, the first one named is primary.
+1. Each message gets exactly one label, the intent for the action the customer wants done. If a message asks for several things, the first one asked is the primary request and decides the label. Example: "where is my order, and also I want a refund" is `order_status`, because the first thing asked is the order's status. Rules 2 and 5 below are the exceptions.
 2. If the customer changes their mind, the last request wins ("cancel it... actually never mind, where is it?" is `order_status`).
 3. Cancel plus refund: an order not yet delivered is `cancel_order`, a delivered one is `refund_request`.
 4. A complaint with no request is labelled by the problem: late is `delivery_delay`, something absent is `missing_item`, something different is `wrong_item`.
