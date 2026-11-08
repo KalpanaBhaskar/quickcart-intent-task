@@ -1,4 +1,4 @@
-"""Evaluate the baseline on the dev set and write results/baseline_dev.json.
+"""Evaluate the taxonomy_v1 baseline on the dev set and write results/baseline_v1.json.
 
 Run:  python -m baseline.eval      (from the task-repo folder)
 Note: dev labels are SILVER (noisy), so numbers here are a guide, not the truth.
@@ -49,7 +49,7 @@ def main():
         "note": "dev labels are silver (noisy). See README.",
     }
     RESULTS.mkdir(exist_ok=True)
-    json.dump(out, open(RESULTS / "baseline_dev.json", "w"), indent=2)
+    json.dump(out, open(RESULTS / "baseline_v1.json", "w"), indent=2)
     print(f"dev n={len(dev)}  top1={top1:.3f}  top3={top3:.3f}  MRR={mrr:.3f}  macro-F1={macro_f1:.3f}")
     for k in m.intents:
         r = out["per_class"][k]

@@ -1,0 +1,252 @@
+{
+  "n_dev": 4000,
+  "top1_accuracy": 0.5625,
+  "top3_accuracy": 0.8582,
+  "mrr": 0.7862,
+  "macro_f1": 0.5939,
+  "per_class": {
+    "order_status": {
+      "precision": 0.6949,
+      "recall": 0.3868,
+      "f1-score": 0.497,
+      "support": 212.0
+    },
+    "delivery_delay": {
+      "precision": 0.8125,
+      "recall": 0.6484,
+      "f1-score": 0.7212,
+      "support": 401.0
+    },
+    "cancel_order": {
+      "precision": 0.7838,
+      "recall": 0.6444,
+      "f1-score": 0.7073,
+      "support": 225.0
+    },
+    "refund_request": {
+      "precision": 0.7855,
+      "recall": 0.4158,
+      "f1-score": 0.5437,
+      "support": 546.0
+    },
+    "missing_item": {
+      "precision": 0.7925,
+      "recall": 0.4315,
+      "f1-score": 0.5588,
+      "support": 292.0
+    },
+    "wrong_item": {
+      "precision": 0.6962,
+      "recall": 0.5238,
+      "f1-score": 0.5978,
+      "support": 525.0
+    },
+    "payment_failed": {
+      "precision": 0.228,
+      "recall": 0.8757,
+      "f1-score": 0.3617,
+      "support": 378.0
+    },
+    "promo_code_issue": {
+      "precision": 0.698,
+      "recall": 0.4406,
+      "f1-score": 0.5402,
+      "support": 320.0
+    },
+    "change_address": {
+      "precision": 0.7597,
+      "recall": 0.5652,
+      "f1-score": 0.6482,
+      "support": 207.0
+    },
+    "account_help": {
+      "precision": 0.8503,
+      "recall": 0.644,
+      "f1-score": 0.7329,
+      "support": 441.0
+    },
+    "talk_to_agent": {
+      "precision": 0.6266,
+      "recall": 0.5984,
+      "f1-score": 0.6122,
+      "support": 244.0
+    },
+    "out_of_scope": {
+      "precision": 0.7296,
+      "recall": 0.555,
+      "f1-score": 0.6304,
+      "support": 209.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      82,
+      3,
+      14,
+      1,
+      2,
+      4,
+      85,
+      0,
+      6,
+      3,
+      12,
+      0
+    ],
+    [
+      0,
+      260,
+      2,
+      8,
+      1,
+      10,
+      101,
+      0,
+      1,
+      8,
+      8,
+      2
+    ],
+    [
+      12,
+      3,
+      145,
+      0,
+      1,
+      2,
+      51,
+      2,
+      2,
+      1,
+      1,
+      5
+    ],
+    [
+      5,
+      14,
+      6,
+      227,
+      2,
+      46,
+      221,
+      5,
+      0,
+      4,
+      14,
+      2
+    ],
+    [
+      1,
+      7,
+      0,
+      3,
+      126,
+      27,
+      80,
+      4,
+      5,
+      9,
+      8,
+      22
+    ],
+    [
+      1,
+      9,
+      4,
+      24,
+      3,
+      275,
+      174,
+      4,
+      5,
+      5,
+      18,
+      3
+    ],
+    [
+      2,
+      3,
+      4,
+      7,
+      5,
+      3,
+      331,
+      5,
+      2,
+      7,
+      6,
+      3
+    ],
+    [
+      4,
+      5,
+      1,
+      10,
+      3,
+      6,
+      124,
+      141,
+      11,
+      7,
+      6,
+      2
+    ],
+    [
+      4,
+      1,
+      1,
+      2,
+      2,
+      4,
+      61,
+      11,
+      117,
+      1,
+      3,
+      0
+    ],
+    [
+      1,
+      9,
+      5,
+      5,
+      4,
+      4,
+      89,
+      27,
+      3,
+      284,
+      7,
+      3
+    ],
+    [
+      1,
+      3,
+      1,
+      2,
+      1,
+      1,
+      84,
+      1,
+      0,
+      3,
+      146,
+      1
+    ],
+    [
+      5,
+      3,
+      2,
+      0,
+      9,
+      13,
+      51,
+      2,
+      2,
+      2,
+      4,
+      116
+    ]
+  ],
+  "note": "dev labels are silver (noisy). See README."
+}

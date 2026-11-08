@@ -20,7 +20,7 @@ THRESHOLD = 0.10          # below this best-match score we call it out_of_scope
 
 
 def load_taxonomy():
-    tax = json.load(open(DATA / "taxonomy.json", encoding="utf-8"))
+    tax = json.load(open(DATA / "taxonomy_v1.json", encoding="utf-8"))
     return [i["name"] for i in tax["intents"]], {i["name"]: i["examples"] for i in tax["intents"]}
 
 
@@ -63,7 +63,7 @@ class TaxonomyMatcher:
 if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser(description="Write predictions for data/test.csv in the submission format.")
-    ap.add_argument("--out", default=str(Path(__file__).resolve().parent.parent / "submissions" / "baseline_predictions.csv"))
+    ap.add_argument("--out", default=str(Path(__file__).resolve().parent.parent / "submissions" / "submission_v1.csv"))
     a = ap.parse_args()
     test = pd.read_csv(DATA / "test.csv")
     pred, _ = TaxonomyMatcher().predict(test.utterance.tolist())
