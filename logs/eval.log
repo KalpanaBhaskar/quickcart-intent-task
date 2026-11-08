@@ -1,0 +1,78 @@
+[2026-11-08 23:36:01] INFO — __main__ — ============================================================
+[2026-11-08 23:36:01] INFO — __main__ — PHASE 3 — EXPORT AND CALIBRATION
+[2026-11-08 23:36:01] INFO — __main__ — ============================================================
+[2026-11-08 23:36:01] INFO — __main__ — Loading checkpoint from C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\models\best_checkpoint.pt
+[2026-11-08 23:36:08] INFO — __main__ — Loaded checkpoint: epoch=9, dev_macro_F1=0.8894, dev_ECE=0.0090
+[2026-11-08 23:36:09] INFO — __main__ — Exporting model to ONNX: C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\models\model.onnx
+[2026-11-08 23:36:13] INFO — __main__ — ONNX export verified. File size: 133.1 MB
+[2026-11-08 23:36:14] INFO — __main__ — ORT session built. Inputs: ['input_ids', 'attention_mask']
+[2026-11-08 23:36:14] INFO — __main__ — Loading dev.csv from C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\data\dev.csv
+[2026-11-08 23:37:16] INFO — __main__ — Temperature scaling: T* = 0.9897 (NLL = 0.5647)
+[2026-11-08 23:37:17] INFO — __main__ — OOS threshold tuning: θ* = 0.2 (OOS F1 = 0.9302)
+[2026-11-08 23:37:17] INFO — __main__ — 
+ theta  oos_precision  oos_recall   oos_f1  macro_f1
+  0.20       0.909091    0.952381 0.930233  0.889445
+  0.25       0.906801    0.952381 0.929032  0.889456
+  0.30       0.897756    0.952381 0.924262  0.889044
+  0.35       0.895522    0.952381 0.923077  0.889015
+  0.40       0.884804    0.955026 0.918575  0.889119
+  0.45       0.863636    0.955026 0.907035  0.887709
+  0.50       0.839535    0.955026 0.893564  0.885498
+  0.55       0.805804    0.955026 0.874092  0.883350
+  0.60       0.788671    0.957672 0.864994  0.882321
+  0.65       0.764211    0.960317 0.851114  0.880683
+  0.70       0.731855    0.960317 0.830664  0.877221
+  0.75       0.699234    0.965608 0.811111  0.873914
+  0.80       0.664845    0.965608 0.787487  0.869406
+[2026-11-08 23:37:17] INFO — __main__ — Loading cleaned training set from C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\data\cleaned_train.csv
+[2026-11-08 23:37:17] INFO — __main__ — Embedding 26920 cleaned training texts for Mahalanobis fitting…
+[2026-11-08 23:44:20] INFO — __main__ — Fitting Mahalanobis parameters with Ledoit-Wolf shrinkage…
+[2026-11-08 23:44:20] INFO — __main__ — Ledoit-Wolf shrinkage α = 0.0003. Precision matrix shape: (384, 384)
+[2026-11-08 23:44:21] INFO — __main__ — Mahalanobis threshold: τ = 25.1892 (flags 10.0% of dev queries)
+[2026-11-08 23:44:21] INFO — __main__ — Saved calibration params → C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\models\calibration_params.json
+[2026-11-08 23:44:21] INFO — __main__ — Saved Mahalanobis params → C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\models\mahal_params.pkl
+[2026-11-08 23:44:21] INFO — __main__ — ============================================================
+[2026-11-08 23:44:21] INFO — __main__ — DEV ANALYSIS
+[2026-11-08 23:44:21] INFO — __main__ — ============================================================
+[2026-11-08 23:44:21] INFO — __main__ — Dev ECE before temperature scaling: 0.0090
+[2026-11-08 23:44:21] INFO — __main__ — Dev ECE after temperature scaling (T*=0.9897): 0.0113
+[2026-11-08 23:44:21] INFO — __main__ — Dev macro-F1: 0.8894, accuracy: 0.8922
+[2026-11-08 23:44:21] INFO — __main__ — 
+Per-class metrics:
+[2026-11-08 23:44:21] INFO — __main__ —   order_status         P=0.886  R=0.935  F1=0.910  n=525.0
+[2026-11-08 23:44:21] INFO — __main__ —   delivery_delay       P=0.902  R=0.857  F1=0.879  n=546.0
+[2026-11-08 23:44:21] INFO — __main__ —   cancel_order         P=0.904  R=0.893  F1=0.898  n=401.0
+[2026-11-08 23:44:21] INFO — __main__ —   refund_request       P=0.896  R=0.900  F1=0.898  n=441.0
+[2026-11-08 23:44:21] INFO — __main__ —   missing_item         P=0.906  R=0.887  F1=0.896  n=292.0
+[2026-11-08 23:44:21] INFO — __main__ —   wrong_item           P=0.897  R=0.871  F1=0.883  n=209.0
+[2026-11-08 23:44:21] INFO — __main__ —   payment_failed       P=0.853  R=0.869  F1=0.861  n=320.0
+[2026-11-08 23:44:21] INFO — __main__ —   promo_code_issue     P=0.904  R=0.860  F1=0.881  n=207.0
+[2026-11-08 23:44:21] INFO — __main__ —   change_address       P=0.876  R=0.938  F1=0.906  n=225.0
+[2026-11-08 23:44:21] INFO — __main__ —   account_help         P=0.908  R=0.835  F1=0.870  n=212.0
+[2026-11-08 23:44:21] INFO — __main__ —   talk_to_agent        P=0.861  R=0.861  F1=0.861  n=244.0
+[2026-11-08 23:44:21] INFO — __main__ —   out_of_scope         P=0.909  R=0.952  F1=0.930  n=378.0
+[2026-11-08 23:44:21] INFO — __main__ — Cross-encoder trigger rates:
+[2026-11-08 23:44:21] INFO — __main__ — 
+ delta  trigger_count  trigger_rate
+  0.05              7       0.00175
+  0.10             14       0.00350
+  0.15             23       0.00575
+  0.20             35       0.00875
+  0.25             43       0.01075
+  0.30             50       0.01250
+  0.35             60       0.01500
+  0.40             69       0.01725
+[2026-11-08 23:44:26] INFO — __main__ — Latency (n=500): median=9.4 ms, P95=17.6 ms, P99=19.6 ms
+[2026-11-08 23:44:26] INFO — __main__ — Saved per-class metrics → C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\results\per_class_metrics.csv
+[2026-11-08 23:44:26] INFO — __main__ — Saved confusion matrix → C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\results\confusion_matrix.csv
+[2026-11-08 23:44:29] INFO — __main__ — Saved confusion matrix plot → C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\results\confusion_matrix.png
+[2026-11-08 23:44:29] INFO — __main__ — Saved full dev results → C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\results\eval_dev.json
+[2026-11-08 23:44:29] INFO — __main__ — ============================================================
+[2026-11-08 23:44:29] INFO — __main__ — eval.py complete.
+[2026-11-08 23:44:29] INFO — __main__ —   Dev macro-F1 : 0.8894
+[2026-11-08 23:44:29] INFO — __main__ —   Dev accuracy : 0.8922
+[2026-11-08 23:44:29] INFO — __main__ —   ECE (scaled) : 0.0113
+[2026-11-08 23:44:29] INFO — __main__ —   T*           : 0.9897
+[2026-11-08 23:44:29] INFO — __main__ —   θ            : 0.2
+[2026-11-08 23:44:29] INFO — __main__ —   τ (Mahal)    : 25.1892
+[2026-11-08 23:44:29] INFO — __main__ — ============================================================

@@ -1,0 +1,38 @@
+[2026-11-08 23:51:27] INFO — __main__ — ============================================================
+[2026-11-08 23:51:27] INFO — __main__ — PHASE 4 — INFERENCE AND SUBMISSION
+[2026-11-08 23:51:27] INFO — __main__ — ============================================================
+[2026-11-08 23:51:29] INFO — __main__ — Loaded calibration: T*=0.9897, θ=0.2, δ=0.15, τ=25.1892
+[2026-11-08 23:51:29] INFO — __main__ — Loaded Mahalanobis params: 12 centroids, precision matrix shape=(384, 384)
+[2026-11-08 23:51:29] INFO — __main__ — Loading test data from C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\data\test.csv
+[2026-11-08 23:51:29] INFO — __main__ — Test rows: 3000
+[2026-11-08 23:51:29] INFO — __main__ — Warming up ONNX Runtime (10 passes)…
+[2026-11-08 23:51:51] INFO — __main__ — Loading cross-encoder: cross-encoder/ms-marco-MiniLM-L-6-v2
+[2026-11-08 23:52:51] INFO — __main__ — Inference complete: 3000 samples. OOS: 0 (0.0%), OOD flags: 312 (10.4%), CE triggered: 13 (0.4%)
+[2026-11-08 23:52:51] INFO — __main__ — Latency: median=9.1 ms, P95=15.5 ms, P99=20.2 ms
+[2026-11-08 23:52:51] INFO — __main__ — Saved submission → C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\submissions\Kalpana_predictions.csv
+[2026-11-08 23:52:51] INFO — __main__ — Submission shape: (3000, 2)
+[2026-11-08 23:52:51] INFO — __main__ — Intent distribution:
+intent
+order_status        421
+delivery_delay      393
+refund_request      328
+out_of_scope        300
+cancel_order        300
+payment_failed      246
+missing_item        214
+talk_to_agent       180
+change_address      179
+wrong_item          153
+promo_code_issue    150
+account_help        136
+[2026-11-08 23:52:51] INFO — __main__ — Saved latency report → C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\results\test_latency_report.json
+[2026-11-08 23:52:51] INFO — __main__ — ============================================================
+[2026-11-08 23:52:51] INFO — __main__ — INFERENCE SUMMARY
+[2026-11-08 23:52:51] INFO — __main__ —   Test samples  : 3000
+[2026-11-08 23:52:51] INFO — __main__ —   OOS predicted : 0
+[2026-11-08 23:52:51] INFO — __main__ —   OOD flagged   : 312  (review flag only; label still returned)
+[2026-11-08 23:52:51] INFO — __main__ —   CE triggered  : 13
+[2026-11-08 23:52:51] INFO — __main__ —   Median latency: 9.1 ms
+[2026-11-08 23:52:51] INFO — __main__ —   P99 latency   : 20.2 ms
+[2026-11-08 23:52:51] INFO — __main__ —   Submission    : C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\submissions\Kalpana_predictions.csv
+[2026-11-08 23:52:51] INFO — __main__ — ============================================================

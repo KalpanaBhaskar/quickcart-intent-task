@@ -1,0 +1,97 @@
+[2026-11-08 22:47:50] INFO — __main__ — Device: cuda
+[2026-11-08 22:47:50] INFO — __main__ — ============================================================
+[2026-11-08 22:47:50] INFO — __main__ — PHASE 1 — DATA ENGINE
+[2026-11-08 22:47:50] INFO — __main__ — ============================================================
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — order_status: 25
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — delivery_delay: 24
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — cancel_order: 21
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — refund_request: 24
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — missing_item: 25
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — wrong_item: 26
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — payment_failed: 24
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — promo_code_issue: 22
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — change_address: 21
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — account_help: 21
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — talk_to_agent: 21
+[2026-11-08 22:47:50] INFO — __main__ —   Taxonomy examples — out_of_scope: 33
+[2026-11-08 22:47:50] INFO — __main__ — Loading training data from C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\data\train.csv
+[2026-11-08 22:47:50] INFO — __main__ — Raw training rows: 30000
+[2026-11-08 22:47:50] INFO — __main__ — Running Cleanlab on 30000 training rows with 5-fold CV…
+[2026-11-08 22:49:19] INFO — __mp_main__ — Device: cuda
+[2026-11-08 22:49:19] INFO — __mp_main__ — Device: cuda
+[2026-11-08 22:49:19] INFO — __mp_main__ — Device: cuda
+[2026-11-08 22:49:19] INFO — __mp_main__ — Device: cuda
+[2026-11-08 22:49:19] INFO — __mp_main__ — Device: cuda
+[2026-11-08 22:49:19] INFO — __main__ — Cleanlab flagged 3080 / 30000 rows (10.3%) as likely mislabelled
+[2026-11-08 22:49:19] INFO — __main__ — Per-class noise rates:
+          intent  n_total  n_flagged  noise_rate
+    account_help      388        228    0.587629
+promo_code_issue      325        170    0.523077
+   talk_to_agent     2128        339    0.159305
+      wrong_item     1730        247    0.142775
+  refund_request     3698        401    0.108437
+  delivery_delay     4385        468    0.106727
+    cancel_order     3265        314    0.096172
+    missing_item     2278        211    0.092625
+  payment_failed     2547        198    0.077739
+  change_address     1862        137    0.073577
+    order_status     4383        260    0.059320
+    out_of_scope     3011        107    0.035536
+[2026-11-08 22:49:19] INFO — __main__ — Top-10 most ambiguous removed samples:
+[2026-11-08 22:49:19] INFO — __main__ —   [promo_code_issue → payment_failed] hi, I can't pay for my order kindly check?
+[2026-11-08 22:49:19] INFO — __main__ —   [missing_item → out_of_scope] I want to joiin as a delivery prtner
+[2026-11-08 22:49:19] INFO — __main__ —   [delivery_delay → cancel_order] Good evening, I accidentally ordered, please cancel!!
+[2026-11-08 22:49:19] INFO — __main__ —   [missing_item → refund_request] paisa wapas chahiye sorry, wrong thing, missing item in order QC6905
+[2026-11-08 22:49:19] INFO — __main__ —   [refund_request → payment_failed] this is the wort day I've had this week. hi team, my wallet payment failed?
+[2026-11-08 22:49:19] INFO — __main__ —   [delivery_delay → cancel_order] cancel my food order, taking too long. my neighbour also uses thsi app. I usuaal
+[2026-11-08 22:49:19] INFO — __main__ —   [cancel_order → refund_request] hi team, I want a refund please?
+[2026-11-08 22:49:19] INFO — __main__ —   [cancel_order → talk_to_agent] is there a phone number for support.
+[2026-11-08 22:49:19] INFO — __main__ —   [order_status → cancel_order] is QC44831 out for delivery also, i'd like to cancel this order and reorder
+[2026-11-08 22:49:19] INFO — __main__ —   [order_status → delivery_delay] hsllo tnere. late agin!!
+[2026-11-08 22:49:19] INFO — __main__ — Cleaned training set: 26920 rows (removed 3080). Elapsed: 88.6s
+[2026-11-08 22:49:19] INFO — __main__ — Saved cleaned training set → C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\data\cleaned_train.csv
+[2026-11-08 22:49:19] INFO — __main__ — Saved noise report → C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\results\noise_report.csv
+[2026-11-08 22:49:23] INFO — __main__ — Training corpus class distribution:
+[2026-11-08 22:49:23] INFO — __main__ —   order_status: 4248
+[2026-11-08 22:49:23] INFO — __main__ —   delivery_delay: 4037
+[2026-11-08 22:49:23] INFO — __main__ —   cancel_order: 3056
+[2026-11-08 22:49:23] INFO — __main__ —   refund_request: 3417
+[2026-11-08 22:49:23] INFO — __main__ —   missing_item: 2192
+[2026-11-08 22:49:23] INFO — __main__ —   wrong_item: 1613
+[2026-11-08 22:49:23] INFO — __main__ —   payment_failed: 2469
+[2026-11-08 22:49:23] INFO — __main__ —   promo_code_issue: 265
+[2026-11-08 22:49:23] INFO — __main__ —   change_address: 1830
+[2026-11-08 22:49:23] INFO — __main__ —   account_help: 265
+[2026-11-08 22:49:23] INFO — __main__ —   talk_to_agent: 1894
+[2026-11-08 22:49:23] INFO — __main__ —   out_of_scope: 3069
+[2026-11-08 22:49:23] INFO — __main__ — Total training items: 28355
+[2026-11-08 22:49:23] INFO — __main__ — ============================================================
+[2026-11-08 22:49:23] INFO — __main__ — PHASE 2 — TRAINING
+[2026-11-08 22:49:23] INFO — __main__ — ============================================================
+[2026-11-08 22:49:23] INFO — __main__ — Loading tokenizer and model: BAAI/bge-small-en-v1.5
+[2026-11-08 22:49:35] INFO — __main__ — Model parameters: 33,364,620 total, 22,717,836 trainable
+[2026-11-08 22:49:35] INFO — __main__ — Loading dev data from C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\data\dev.csv
+[2026-11-08 22:49:35] INFO — __main__ — Dev rows: 4000
+[2026-11-08 22:54:05] INFO — __main__ — Epoch 01 | loss=1.9499 (CE=2.3488, NCE=1.0193) | Dev: macro_F1=0.7949, accuracy=0.7995, ECE=0.6544 | time=265.7s
+[2026-11-08 22:54:06] INFO — __main__ —   → Saved best checkpoint (macro_F1=0.7949)
+[2026-11-08 22:58:33] INFO — __main__ — Epoch 02 | loss=1.2013 (CE=1.5627, NCE=0.3581) | Dev: macro_F1=0.8577, accuracy=0.8608, ECE=0.4992 | time=262.0s
+[2026-11-08 22:58:34] INFO — __main__ —   → Saved best checkpoint (macro_F1=0.8577)
+[2026-11-08 23:02:56] INFO — __main__ — Epoch 03 | loss=0.7358 (CE=0.9497, NCE=0.2367) | Dev: macro_F1=0.8704, accuracy=0.8742, ECE=0.3070 | time=258.1s
+[2026-11-08 23:02:57] INFO — __main__ —   → Saved best checkpoint (macro_F1=0.8704)
+[2026-11-08 23:07:26] INFO — __main__ — Epoch 04 | loss=0.5036 (CE=0.6503, NCE=0.1612) | Dev: macro_F1=0.8796, accuracy=0.8825, ECE=0.1760 | time=264.0s
+[2026-11-08 23:07:27] INFO — __main__ —   → Saved best checkpoint (macro_F1=0.8796)
+[2026-11-08 23:11:54] INFO — __main__ — Epoch 05 | loss=0.3930 (CE=0.5056, NCE=0.1303) | Dev: macro_F1=0.8834, accuracy=0.8862, ECE=0.1006 | time=262.9s
+[2026-11-08 23:11:55] INFO — __main__ —   → Saved best checkpoint (macro_F1=0.8834)
+[2026-11-08 23:16:25] INFO — __main__ — Epoch 06 | loss=0.3374 (CE=0.4343, NCE=0.1115) | Dev: macro_F1=0.8850, accuracy=0.8882, ECE=0.0551 | time=264.8s
+[2026-11-08 23:16:26] INFO — __main__ —   → Saved best checkpoint (macro_F1=0.8850)
+[2026-11-08 23:20:56] INFO — __main__ — Epoch 07 | loss=0.3044 (CE=0.3956, NCE=0.0917) | Dev: macro_F1=0.8884, accuracy=0.8912, ECE=0.0309 | time=265.7s
+[2026-11-08 23:20:57] INFO — __main__ —   → Saved best checkpoint (macro_F1=0.8884)
+[2026-11-08 23:25:28] INFO — __main__ — Epoch 08 | loss=0.2854 (CE=0.3724, NCE=0.0823) | Dev: macro_F1=0.8881, accuracy=0.8908, ECE=0.0140 | time=265.8s
+[2026-11-08 23:25:28] INFO — __main__ —   → No improvement. Early-stop counter: 1/3, LR counter: 1/2
+[2026-11-08 23:29:59] INFO — __main__ — Epoch 09 | loss=0.2755 (CE=0.3607, NCE=0.0764) | Dev: macro_F1=0.8894, accuracy=0.8922, ECE=0.0090 | time=266.2s
+[2026-11-08 23:30:00] INFO — __main__ —   → Saved best checkpoint (macro_F1=0.8894)
+[2026-11-08 23:33:11] INFO — __main__ — Epoch 10 | loss=0.2772 (CE=0.3595, NCE=0.0851) | Dev: macro_F1=0.8894, accuracy=0.8922, ECE=0.0116 | time=188.6s
+[2026-11-08 23:33:11] INFO — __main__ —   → No improvement. Early-stop counter: 1/3, LR counter: 1/2
+[2026-11-08 23:33:11] INFO — __main__ — Training complete. Best checkpoint: C:\Users\Kalpana\Documents\GitHub\quickcart-intent-task\models\best_checkpoint.pt
+[2026-11-08 23:33:11] INFO — __main__ — Best dev Macro-F1: 0.8894
+[2026-11-08 23:36:01] INFO — train — Device: cuda
