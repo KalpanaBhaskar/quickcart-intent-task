@@ -1,6 +1,3 @@
-# Python 3.10+
-# Add anything else you use (and say why in your write-up).
-
 # =============================================================================
 # QuickCart Intent Pipeline — Requirements
 # Python 3.10+   |   4-core / 15 GB ceiling
