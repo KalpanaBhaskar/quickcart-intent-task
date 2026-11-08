@@ -1,0 +1,12 @@
+{
+  "median_ms": 9.08,
+  "p50_ms": 9.08,
+  "p95_ms": 15.478599999999997,
+  "p99_ms": 20.18489999999998,
+  "mean_ms": 27.309324999999998,
+  "n_samples": 3000,
+  "oos_count": 0,
+  "ood_count": 312,
+  "ce_triggered_count": 13,
+  "hardware_note": "ONNX Runtime, CPUExecutionProvider, 4 intra-op threads. P99 includes cross-encoder when triggered (~15% of queries)."
+}
